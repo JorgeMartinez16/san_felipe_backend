@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface AvalaibleServiceRepository extends JpaRepository<AvalaibleService, Long> {
-    List<AvalaibleService> findByServiceId (Long id);
+    List<AvalaibleService> findByName (String name);
 }

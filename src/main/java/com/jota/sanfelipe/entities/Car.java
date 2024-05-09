@@ -9,9 +9,11 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+    @Column(name="placa")
     private String placa;
+    @Column(name="marca")
     private String marca;
+    @Column(name="color")
     private String color;
 
     @ManyToOne

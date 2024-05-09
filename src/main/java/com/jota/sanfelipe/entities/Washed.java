@@ -9,8 +9,6 @@ public class Washed {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(name="descripcion")
-    private String description;
 
     @ManyToOne
     @JoinColumn(name="employee_id")
@@ -20,6 +18,10 @@ public class Washed {
     @JoinColumn(name="car_id")
     private Car car;
 
+    @ManyToOne
+    @JoinColumn(name="avalaibleservice_id")
+    private AvalaibleService avalaible_service;
+
     public Long getId() {
         return id;
     }
@@ -28,14 +30,27 @@ public class Washed {
         this.id = id;
     }
 
-
-    public String getDescription() {
-        return description;
+    public Employee getEmployee() {
+        return employee;
     }
 
-    public void setDescription(String description) {
-        description = description;
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
+    public Car getCar() {
+        return car;
+    }
 
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
+    public AvalaibleService getAvalaible_service() {
+        return avalaible_service;
+    }
+
+    public void setAvalaible_service(AvalaibleService avalaible_service) {
+        this.avalaible_service = avalaible_service;
+    }
 }
