@@ -3,20 +3,19 @@ package com.jota.sanfelipe.entities;
 import jakarta.persistence.*;
 
 @Entity
-public class Client {
+@Table(name="employees")
+public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(name="name")
     private String name;
-    @Column(name="lastname")
+    @Column(name="apellido")
     private String lastName;
-    @Column(name="nit")
-    private String nit;
-    @Column(name="phoneNumber")
+    @Column(name="telefono")
     private double phoneNumber;
-    public Client() {
-    }
+    @Column(name="cargo")
+    private String position;
 
     public Long getId() {
         return id;
@@ -34,6 +33,10 @@ public class Client {
         this.name = name;
     }
 
+    public String getPosition() {
+        return position;
+    }
+
     public String getLastName() {
         return lastName;
     }
@@ -42,19 +45,15 @@ public class Client {
         this.lastName = lastName;
     }
 
-    public String getNit() {
-        return nit;
-    }
-
-    public void setNit(String nit) {
-        this.nit = nit;
-    }
-
     public double getPhoneNumber() {
         return phoneNumber;
     }
 
     public void setPhoneNumber(double phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
     }
 }
