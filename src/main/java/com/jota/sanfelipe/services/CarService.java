@@ -20,4 +20,9 @@ public class CarService {
         return carRepository.findAll();
     }
 
+    public void deleteCarByLicencePlate(String licencePlate) {
+        Car car = carRepository.findByLicencePlate(licencePlate);
+        carRepository.delete(car);
+    }
+
 }

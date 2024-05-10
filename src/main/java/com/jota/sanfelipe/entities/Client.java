@@ -9,7 +9,12 @@ public class Client {
     private Long id;
     @Column(name="name")
     private String name;
-
+    @Column(name="lastname")
+    private String lastName;
+    @Column(name="nit")
+    private String nit;
+    @Column(name="phoneNumber")
+    private double phoneNumber;
     public Client() {
     }
 
@@ -27,5 +32,29 @@ public class Client {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getNit() {
+        return nit;
+    }
+
+    public void setNit(String nit) {
+        this.nit = nit;
+    }
+
+    public double getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(double phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

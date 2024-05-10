@@ -25,4 +25,11 @@ public class CarController {
         Car savedCar = carService.registerCar(car);
         return new ResponseEntity<>(savedCar, HttpStatus.CREATED);
     }
+
+    @DeleteMapping("/{licencePlate}")
+    public ResponseEntity<String> deleteCar(@PathVariable("licencePlate") String licencePlate){
+        carService.deleteCarByLicencePlate(licencePlate);
+        return ResponseEntity.ok("Car deleted successfully with licence plate: " + licencePlate);
+    }
+
 }

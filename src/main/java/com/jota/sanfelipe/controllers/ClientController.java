@@ -25,4 +25,5 @@ public class ClientController {
         Client savedClient = clientService.registerClient(client);
         return new ResponseEntity<>(savedClient, HttpStatus.CREATED);
     }
+
 }

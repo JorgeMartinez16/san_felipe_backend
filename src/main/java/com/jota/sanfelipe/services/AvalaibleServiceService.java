@@ -1,6 +1,7 @@
 package com.jota.sanfelipe.services;
 
 import com.jota.sanfelipe.entities.AvalaibleService;
+import com.jota.sanfelipe.entities.Car;
 import com.jota.sanfelipe.entities.Employee;
 import com.jota.sanfelipe.repository.AvalaibleServiceRepository;
 import com.jota.sanfelipe.repository.EmployeeRepository;
@@ -19,5 +20,11 @@ public class AvalaibleServiceService {
     }
     public List<AvalaibleService> getAllAvalaibleService(){
         return avalaibleServiceRepository.findAll();
+    }
+
+
+    public void deleteAvalaibleServiceByName(String name) {
+        AvalaibleService avalaibleService = avalaibleServiceRepository.findByName(name);
+        avalaibleServiceRepository.delete(avalaibleService);
     }
 }

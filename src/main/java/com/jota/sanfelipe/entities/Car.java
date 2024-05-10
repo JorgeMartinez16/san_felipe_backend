@@ -10,9 +10,9 @@ public class Car {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(name="placa")
-    private String placa;
+    private String licencePlate;
     @Column(name="marca")
-    private String marca;
+    private String make;
     @Column(name="color")
     private String color;
 
@@ -34,20 +34,20 @@ public class Car {
         this.id = id;
     }
 
-    public String getPlaca() {
-        return placa;
+    public String getLicencePlate() {
+        return licencePlate;
     }
 
-    public void setPlaca(String placa) {
-        this.placa = placa;
+    public void setLicencePlate(String licencePlate) {
+        this.licencePlate = licencePlate;
     }
 
-    public String getMarca() {
-        return marca;
+    public String getMake() {
+        return make;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void setMake(String make) {
+        this.make = make;
     }
 
     public String getColor() {

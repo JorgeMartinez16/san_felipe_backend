@@ -26,5 +26,11 @@ public class AvalaibleServiceController {
         AvalaibleService savedAvalaibleService = avalaibleServiceService.registerAvalaibleService(avalaibleService);
         return new ResponseEntity<>(savedAvalaibleService, HttpStatus.CREATED);
     }
+    @DeleteMapping("/{name}")
+    public ResponseEntity<String> deleteAvalaibleService(@PathVariable("name") String name){
+        avalaibleServiceService.deleteAvalaibleServiceByName(name);
+        return ResponseEntity.ok("the service: " + name +  " has been removed ");
+    }
+
 
 }

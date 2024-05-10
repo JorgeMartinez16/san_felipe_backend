@@ -11,9 +11,9 @@ public class Employee {
     @Column(name="name")
     private String name;
     @Column(name="apellido")
-    private String apellido;
+    private String lastName;
     @Column(name="telefono")
-    private double telefono;
+    private double phoneNumber;
     @Column(name="cargo")
     private String position;
 
@@ -37,22 +37,23 @@ public class Employee {
         return position;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public double getTelefono() {
-        return telefono;
+    public double getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setTelefono(double telefono) {
-        this.telefono = telefono;
+    public void setPhoneNumber(double phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-
-
+    public void setPosition(String position) {
+        this.position = position;
+    }
 }
